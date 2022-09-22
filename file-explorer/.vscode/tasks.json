@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "install",
+			"problemMatcher": [],
+			"label": "npm install",
+			"detail": "Install dependencies from \"package.json\"."
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"problemMatcher": [],
+			"label": "Run ElectronJS",
+			"detail": "Just runs ElectronJS in native Node.js enviroment. Crashes will kill process.",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "npm",
+			"script": "start:nodemon",
+			"problemMatcher": [],
+			"label": "Run nodemon (recommended)",
+			"detail": "Runs ElectronJS in nodemon wrapper. Crashes will restart process. Warning: nodemon blocks files, can't delete them!"
+		}
+	]
+}

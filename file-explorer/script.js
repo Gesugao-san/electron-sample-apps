@@ -1,7 +1,8 @@
 global.$ = $;
 
-const {remote} = require('electron');
-const {Menu, BrowserWindow, MenuItem, shell} = remote;
+//const remote = require('@electron/remote');
+const { Menu, BrowserWindow, MenuItem, shell } = require('@electron/remote');
+//const { Menu, BrowserWindow, shell } = require('electron');
 
 var abar = require('address_bar');
 var folder_view = require('folder_view');
@@ -51,7 +52,7 @@ var App = {
   }
 };
 
-$(document).ready(function() {
+$(document).ready(() => {
   initMenu();
 
   var folder = new folder_view.Folder($('#files'));
